@@ -5,27 +5,27 @@
 class Llmfs < Formula
   desc "Virtual Filesystem Server for LLMs and Humans."
   homepage "https://github.com/dropsite-ai/llmfs"
-  version "1.0.2"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/llmfs/releases/download/1.0.2/llmfs_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/llmfs/releases/download/1.3.0/llmfs_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "463ac32e9d910d7987b3d9e88cf3cb0e9d45f0bbb9433c536aa9020e7f183e4d"
+      sha256 "e444aaf863c311a7e6047b38ff0b9af9c7d607d7cb7e5798dd45d51dc1b53977"
 
       def install
         bin.install "llmfs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/llmfs/releases/download/1.0.2/llmfs_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/llmfs/releases/download/1.3.0/llmfs_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "b3720a1dffd8862458c221e1a27959a881bb27371ee2e5eedeadb218df72840c"
+      sha256 "fd3bc64f75af558b8611ac50c73337aa6bd2de1091c6ab73f2e322027f80a8fa"
 
       def install
         bin.install "llmfs"
@@ -36,11 +36,11 @@ class Llmfs < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/llmfs/releases/download/1.0.2/llmfs_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/llmfs/releases/download/1.3.0/llmfs_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "9cc006c09ec58057edaf6a31125aafa6aaa0d7d780b10eb1831a0165e3df8711"
+        sha256 "e1359dffcbb495afc7c6049377ded6696491a0759bc0106668d3d3a93b07b503"
 
         def install
           bin.install "llmfs"
@@ -49,11 +49,11 @@ class Llmfs < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/llmfs/releases/download/1.0.2/llmfs_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/llmfs/releases/download/1.3.0/llmfs_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "aaeb5174342535e8304237a91e605bc8ff53e5f357030cf4c550894de405309b"
+        sha256 "32b9e6f3517f0214e451c9637cb84055b9e413a93546b9eeae3973982f05015d"
 
         def install
           bin.install "llmfs"
