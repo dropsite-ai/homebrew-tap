@@ -5,27 +5,27 @@
 class Config < Formula
   desc "YAML configuration utility functions and CLI."
   homepage "https://github.com/dropsite-ai/config"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/config/releases/download/1.0.0/config_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/config/releases/download/1.1.0/config_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "5f4a697aea194a15eb38f537061def95248a32eca2195ec9227cb8e48b35119c"
+      sha256 "e44149546227101b20f21dc20a4cd48d8d9b4cabe672566ab8a5b0dd6be25ad1"
 
       def install
         bin.install "config"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/config/releases/download/1.0.0/config_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/config/releases/download/1.1.0/config_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "cebf389f6fe771f1ae5104f20a4c1b0a827c9182e0dd8dfd791bc1dd50fcad89"
+      sha256 "3673cf700ff265d0957863708dc97435ac7a8b08e8fa1b86b98efa5d0fd6fe64"
 
       def install
         bin.install "config"
@@ -36,11 +36,11 @@ class Config < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/config/releases/download/1.0.0/config_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/config/releases/download/1.1.0/config_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "451bbf38a42215fd7f4b9e8d8668ea3eed37026c5adf3a2f7e0a4fd147247f2c"
+        sha256 "f03bfcab5cccd809da6e820cd2d667a0316b4b98a4c3c9f4e1415d7181250bca"
 
         def install
           bin.install "config"
@@ -49,11 +49,11 @@ class Config < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/config/releases/download/1.0.0/config_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/config/releases/download/1.1.0/config_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "aad0dd647f9c8e9591d791460336bede0583a01bfd13f8a1afa99b61ac8fe6bc"
+        sha256 "92d2ac4c4d6a0d78cdcf9116bfdccc12dad25dcad39f7e29a0196a1d15c54d5c"
 
         def install
           bin.install "config"
