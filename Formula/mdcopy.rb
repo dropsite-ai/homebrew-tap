@@ -5,27 +5,27 @@
 class Mdcopy < Formula
   desc "Copies files to the clipboard as markdown."
   homepage "https://github.com/dropsite-ai/mdcopy"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/llmfs/releases/download/v1.0.0/mdcopy_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/mdcopy/releases/download/v1.1.0/mdcopy_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "2096592f0f6bcad04dc7fd013126afa84ec5d86941fdcdfd7163968f1212987f"
+      sha256 "820927a1452470f68878565fdc0ca6398bc3fc559c5b096f61b89841109ce4b7"
 
       def install
         bin.install "mdcopy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/llmfs/releases/download/v1.0.0/mdcopy_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/mdcopy/releases/download/v1.1.0/mdcopy_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "a292ebaeb20cad38d9f9e8b6a08bf8d9d7fe054a3fc5a811784b990ea9aaa5ee"
+      sha256 "689937478da9257e814968e9913995c8463e54359d4f60dd57f3c7103c414626"
 
       def install
         bin.install "mdcopy"
@@ -36,11 +36,11 @@ class Mdcopy < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/llmfs/releases/download/v1.0.0/mdcopy_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/mdcopy/releases/download/v1.1.0/mdcopy_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "289992ffdef2b8eb1ca2ea7a170a7eefb72a1a1255bede58ae845363976d094c"
+        sha256 "ab845a1321b4ab33cc50d9414c64c26e4f8e234911b0dff05c270ce0eceb52fe"
 
         def install
           bin.install "mdcopy"
@@ -49,11 +49,11 @@ class Mdcopy < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/llmfs/releases/download/v1.0.0/mdcopy_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/mdcopy/releases/download/v1.1.0/mdcopy_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "c22502c89899515977b99abc3e0b5dbe5aa07cb302ab25ccf45a3e9c2ca435cf"
+        sha256 "35d0a069fb5eb3523a8d9d47898b4504d22f8ac997c3b50540ba5a4792afe8a8"
 
         def install
           bin.install "mdcopy"
