@@ -5,27 +5,27 @@
 class Ghdownloader < Formula
   desc "Download latest releases from a GitHub repository."
   homepage "https://github.com/dropsite-ai/ghdownloader"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.1.0/ghdownloader_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.2.0/ghdownloader_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "62c1ce59f63e2fc84299575729f63c24897230847b5a4a333da90997ed98d17e"
+      sha256 "195de680d4c0bced9f47de71d7cb7ca0fdd8382d31c12b10008d93993992d8d4"
 
       def install
         bin.install "ghdownloader"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.1.0/ghdownloader_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.2.0/ghdownloader_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "ead97f967ac679fde8ccb430a78a05380d6e05a333ba243f41cf5897b5e1c388"
+      sha256 "b9dc95e8e7f39a746a5de7e78ee6ee04f8b73c79e0a7467eb21cc593558e0265"
 
       def install
         bin.install "ghdownloader"
@@ -36,11 +36,11 @@ class Ghdownloader < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.1.0/ghdownloader_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.2.0/ghdownloader_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "9da59e7ccb622f332e0bd9ff4617b80bc0b367b1908e17e432094586a6f67d2d"
+        sha256 "f082f29b88ccd189a0523f7afdd3e0ef7b71d341ce53c0ed849e0492dde508b7"
 
         def install
           bin.install "ghdownloader"
@@ -49,11 +49,11 @@ class Ghdownloader < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.1.0/ghdownloader_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/ghdownloader/releases/download/1.2.0/ghdownloader_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "43c84bd2cf97187b899df2a8b69d6e5492829180fe9b63c43c4b0cbaaa788cab"
+        sha256 "cffb533998f8ae5bf0ea96ac0a0b22db51bf1f6d018b275352b0d886e29d0b3e"
 
         def install
           bin.install "ghdownloader"
