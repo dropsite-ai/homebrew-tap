@@ -5,27 +5,27 @@
 class Gotemplate < Formula
   desc "gotemplate for dropsite-ai."
   homepage "https://github.com/dropsite-ai/gotemplate"
-  version "0.3.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/gotemplate/releases/download/0.3.0/gotemplate_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/gotemplate/releases/download/1.0.0/gotemplate_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "382fb6f2012e1f210de38221c343f739ec0856e70902d7de89d5e49a0b471b05"
+      sha256 "8ae6c9f4c01f5b34a57472e7e61bb2c0155015e3d0b950da65fbac4d3250b506"
 
       def install
         bin.install "gotemplate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/gotemplate/releases/download/0.3.0/gotemplate_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/gotemplate/releases/download/1.0.0/gotemplate_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "0d77e77457057099a8b6da1eb55f51623068fa6c6e20bf02dae08bd538677c45"
+      sha256 "f76d073baf156e5c533e843296c128aad5352edb3cffd16130edeadd4c2370b5"
 
       def install
         bin.install "gotemplate"
@@ -36,11 +36,11 @@ class Gotemplate < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/gotemplate/releases/download/0.3.0/gotemplate_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/gotemplate/releases/download/1.0.0/gotemplate_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "f1c7072e943a40b544604cff251cf6eca0eb9d20499111053e2afaa1058cf783"
+        sha256 "4229c6a40a6b88d00d6988553ee902cfc57734d2f272d64224320059e93cbcaa"
 
         def install
           bin.install "gotemplate"
@@ -49,11 +49,11 @@ class Gotemplate < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/gotemplate/releases/download/0.3.0/gotemplate_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/gotemplate/releases/download/1.0.0/gotemplate_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "8bd0400512dacb25d361895ceddd55190e7348dd81a4ea652bf43e0c88f21d6d"
+        sha256 "be6df47fa16694fcf6f092db151dda736b1915838c5d7d250eabf76eda60a1c7"
 
         def install
           bin.install "gotemplate"
