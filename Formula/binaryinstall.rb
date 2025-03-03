@@ -5,27 +5,27 @@
 class Binaryinstall < Formula
   desc "Install GitHub release binaries onto a server via SCP."
   homepage "https://github.com/dropsite-ai/binaryinstall"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.3.0/binaryinstall_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.4.0/binaryinstall_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "bd1940654057ea4e15f0ac30d15269c37f37764b538a42675e58b2a6d3c3d436"
+      sha256 "4db9a750207baf42b359410954c2b44566b7a932b25f9c71dff6cfe7459eb480"
 
       def install
         bin.install "binaryinstall"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.3.0/binaryinstall_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.4.0/binaryinstall_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "2ec778a6a7ccdde00ed208085d2ae694fa5d33afa6aa7bada916ea91559b1b0e"
+      sha256 "9c26144ae4c939467f4b19825d9050ddfae8b5d283a0cea896c764d4b037c9c9"
 
       def install
         bin.install "binaryinstall"
@@ -36,11 +36,11 @@ class Binaryinstall < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.3.0/binaryinstall_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.4.0/binaryinstall_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "2bc382791c6d7b3f2f916a38947c01ec4d8d2615d338f4b40b4048bf16404086"
+        sha256 "d2589eff59356087054fa8cac9514baa06bf56973efc026b2b38407b600353f1"
 
         def install
           bin.install "binaryinstall"
@@ -49,11 +49,11 @@ class Binaryinstall < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.3.0/binaryinstall_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/binaryinstall/releases/download/0.4.0/binaryinstall_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "b2bfeb5b4687ff91d32894b1bf3f62001757c38130252f518787af8561959024"
+        sha256 "713139892332f67ae8cb223b627b081075ad77759f11ae74b91a75b4a0e33cc5"
 
         def install
           bin.install "binaryinstall"
