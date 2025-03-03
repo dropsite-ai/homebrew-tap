@@ -5,27 +5,27 @@
 class Ghinstaller < Formula
   desc "Install GitHub release binaries onto a server via SCP."
   homepage "https://github.com/dropsite-ai/ghinstaller"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.0.0/ghinstaller_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.1.0/ghinstaller_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "48e126e610e7fda2df08112500a04905c809cd716184a8f29cbd526ea432a152"
+      sha256 "72a217afd2e995b5f4e94735ccdfb1f95bb90e695f6145b708d056714d8c3e41"
 
       def install
         bin.install "ghinstaller"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.0.0/ghinstaller_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.1.0/ghinstaller_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "b7a7c3d905c91be22b367b02c303404c9d50d5176e6af5b2996cad0a96eb8c46"
+      sha256 "4b00e2c6a57038250325a3d83fbc906f8fadda46523eb26f39230c8660e3b54e"
 
       def install
         bin.install "ghinstaller"
@@ -36,11 +36,11 @@ class Ghinstaller < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.0.0/ghinstaller_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.1.0/ghinstaller_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "8359ae31d61ef5d791cda66e93322cf9172cb909ffae5d6547d72136ba2f386a"
+        sha256 "69326b255b345c3efb22c296e1c55f74b83544bfed150298a66c7bc4900eec99"
 
         def install
           bin.install "ghinstaller"
@@ -49,11 +49,11 @@ class Ghinstaller < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.0.0/ghinstaller_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/ghinstaller/releases/download/1.1.0/ghinstaller_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "767cbf13bd851c801f09434d70249960cba242291030d2b987e72165b0441502"
+        sha256 "d1dc26fd77847e897bd774582f6fe9ccdd0eb51b05cac79fdf417d608819d75a"
 
         def install
           bin.install "ghinstaller"
