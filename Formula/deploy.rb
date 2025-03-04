@@ -5,27 +5,27 @@
 class Deploy < Formula
   desc "Install GitHub release binaries onto a server via SCP."
   homepage "https://github.com/dropsite-ai/deploy"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropsite-ai/deploy/releases/download/0.5.0/deploy_Darwin_x86_64.tar.gz",
+      url "https://github.com/dropsite-ai/deploy/releases/download/0.6.0/deploy_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "fc8dc93ed2dfa6b2f22a518b3981fff09287959c93bdb0590eed9b2186acb459"
+      sha256 "c3e311123d48f277d31797020638108abe02b73c009e222134b908279ebb7497"
 
       def install
         bin.install "deploy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropsite-ai/deploy/releases/download/0.5.0/deploy_Darwin_arm64.tar.gz",
+      url "https://github.com/dropsite-ai/deploy/releases/download/0.6.0/deploy_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream"
         ]
-      sha256 "7c55a6da817ecf21c002e69e0e47a9d71d363c470aefe4a0c8289e02cc2dc2a9"
+      sha256 "8926b828787713f59c340d17e221ac6f93e72f8ae6714725dc9556bb8a6b20e3"
 
       def install
         bin.install "deploy"
@@ -36,11 +36,11 @@ class Deploy < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/deploy/releases/download/0.5.0/deploy_Linux_x86_64.tar.gz",
+        url "https://github.com/dropsite-ai/deploy/releases/download/0.6.0/deploy_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "0fbfc1294ebbf01496b86a99b81c465208b4fe4cf70b018ca7e80a4159d3fbce"
+        sha256 "fea54181bc7dc64faecb899cbfb21ee0aac25e89e4c8cd1fdc669ac3b3c7bc4b"
 
         def install
           bin.install "deploy"
@@ -49,11 +49,11 @@ class Deploy < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dropsite-ai/deploy/releases/download/0.5.0/deploy_Linux_arm64.tar.gz",
+        url "https://github.com/dropsite-ai/deploy/releases/download/0.6.0/deploy_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream"
           ]
-        sha256 "52987d6163a45226a3e590625d3257d4bdfc86260307b809e88410dc2cbf5b79"
+        sha256 "c6df71a27112a09ca36d8f5837175b0a19a7f265afba185f6ef8584bfaf1a0a4"
 
         def install
           bin.install "deploy"
